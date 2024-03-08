@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Display All Playlists</title>
+<style>
+h1
+{
+text-align: center;
+}
+section{
+
+padding:10px 20px 50px 350px;
+}
+table,th,td{
+
+border:3px solid blue;
+border-collapse:collapse;
+}
+
+</style>
+</head>
+<body>
+	<h1>Play Lists</h1>
+	<section>
+	<table >
+		<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th style="border-right:0px solid blue; text-align: right; padding-right: 0px;padding-left:300px">Songs</th>
+					<th style="border-left:0px solid blue"><th>
+				</tr>
+		</thead>
+		<tbody>
+			<tr th:each="all:${allplaylist}"> 
+				<td th:text="${all.id}"></td>
+				<td th:text="${all.name}"></td>
+				<td style="border-right:0px solid blue">
+					<ul>
+						<li th:each="song:${all.songs}" style="padding-bottom: 30px; padding-top: 20px; padding-right: 20px "> 
+							<span th:text="${song.name}"></span>
+							
+						</li>
+						
+					</ul>
+					
+				</td>
+				<td class="2s" style="border-left:0px solid blue">
+					<ul th:each="song:${all.songs}" style="padding-right: 20px; padding-left: 15px ">
+						<audio controls>
+							<source th:src="${song.link}">
+						</audio>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</section>
+</body>
+</html>

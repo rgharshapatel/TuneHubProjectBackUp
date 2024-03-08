@@ -1,0 +1,27 @@
+body{
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url('bg.jpg');
+	
+	
+}
+h1{
+	text-align: center;
+	Color:white;
+}
+a{
+	text-decoration: none;
+	font-weight:normal;
+	background-color:skyblue;
+	Color:darkblue;
+	font-size: 15px;
+	padding:  5px 50px 5px 50px;
+	border: 0px solid white;
+	border-radius: 20px;
+}
+.links-container{
+	text-align: center;
+	margin-top: 30px;
+	
+}

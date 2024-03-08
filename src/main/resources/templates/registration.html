@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<title>Registration Form</title>
+		<style type="text/css">
+			body{
+			background-color: aqua;
+			}
+			form{
+				text-align:center;
+				padding: 20px 20px 30px 30px;
+			}
+			h1{
+				text-align:center;
+				color: blue;
+			}
+			#address{
+				height:50px
+			}
+		</style>
+</head>
+<body >
+
+		<form action="register" method="post">
+			<h1>Create Account</h1>
+			<label>Username* :</label>
+			<input type="text" placeholder="Enter Your Name" name="username">
+			<br></br>
+			<label>Email ID*    :</label>
+			<input type="email" placeholder="Enter Your Email" name="email">
+			<br></br>
+			<label>Password* :</label>
+			<input type="password" placeholder="Enter Your Password" name="password">
+			<br></br>
+			<label>Gender*   :</label>
+			<input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="female">Female
+			<input type="radio" name="gender" value="other">Others
+			<br></br>
+			<label>Role*     :</label>
+			<input type="radio" name="role" value="admin">Admin
+			<input type="radio" name="role" value="customer">Customer
+			<br></br>
+			<label>Address*   :</label>
+			<input id="address" type="text" placeholder="Enter Your Adress" name="address">
+			<br></br>
+			<input type="submit" value="SUBMIT">
+		</form>
+</body>
+</html>
